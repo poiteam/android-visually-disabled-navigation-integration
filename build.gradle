@@ -13,6 +13,19 @@ buildscript {
     }
 }
 
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        maven {
+            url "https://jitpack.io"
+            credentials { username =properties.getProperty('jitpackToken')  }
+        }
+    }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
