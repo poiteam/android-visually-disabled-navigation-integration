@@ -28,11 +28,12 @@ android {
 
         buildConfigField "String", "APPID", "\""+getAppId()+"\""
         buildConfigField "String", "APPSECRET", "\""+getAppSecret()+"\""
+        signingConfig signingConfigs.debug
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
