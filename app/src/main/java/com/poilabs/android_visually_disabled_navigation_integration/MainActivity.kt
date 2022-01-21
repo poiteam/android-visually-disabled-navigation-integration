@@ -298,7 +298,8 @@ class MainActivity : AppCompatActivity() {
                     )
                 }
 
-                override fun onFail() {
+                override fun onFail(p0: Throwable?) {
+                    p0?.printStackTrace()
                 }
             })
     }
