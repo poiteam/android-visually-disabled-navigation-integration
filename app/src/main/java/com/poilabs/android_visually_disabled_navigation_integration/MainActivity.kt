@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initSDK() {
         //Blindoors
-        PoiManager.init(this,
-            BuildConfig.APPID,
-            BuildConfig.APPSECRET,
-            localeLanguage,
-            "Test title",
-            object :
+        PoiManager.init(context = this,
+            appId = BuildConfig.APPID,
+            secret = BuildConfig.APPSECRET,
+            language = localeLanguage,
+            title = "Test title",
+            vdResponseListener = object :
                 VDResponseListener {
                 override fun onSuccess() {
                     Intent(this@MainActivity, PoiVdNavigationActivity::class.java).also {
