@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
     private var localeLanguage = Locale.forLanguageTag(Locale.getDefault().language).toString()
 
+    // Optional (7.3.0+): a venue's placeId opens that venue directly instead of the venue list.
+    private val placeId: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +63,8 @@ class MainActivity : AppCompatActivity() {
             override fun onStatusChanged(status: PLPStatus) {
 
             }
-        })
+        },
+        placeId = placeId)
         PoiManager.setUniqueId("test unique id")
     }
 
