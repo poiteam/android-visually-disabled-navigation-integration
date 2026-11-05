@@ -21,7 +21,7 @@ implementation 'com.github.poiteam:Android-VD-Navigation-SDK:7.3.0'
 ## Usage
 
 `MainActivity` calls `PoiManager.init(...)` and starts `PoiVdNavigationActivity` in `onSuccess()`.
-See the [SDK README](https://github.com/poiteam/Android-VD-Navigation-SDK) for every parameter.
+See the Android VD SDK documentation for every parameter, closing the SDK screen and the notes for apps targeting Android 15 or later.
 
 ### Opening a specific venue (placeId)
 
